@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="SquareMarker" style="display: flex; overflow: hidden;">
+        <ui:Label text="Square Marker Dimension" display-tooltip-when-elided="true" name="SquareMarkerDimension" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+        <ui:VisualElement name="SideLength" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+            <uie:FloatField label="Side Length" value="1000" name="SideLengthValue" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+            <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/InnovateLabs/ProjectSetup/Scripts/Editor/TestingListView/testing.uss?fileID=7433441132597879392&amp;guid=bbcabea11e6c63d43a0cc550d58ea9c8&amp;type=3#testing" />
+    <ui:VisualElement name="Holder" style="max-height: 25px; min-height: 5px; flex-direction: row; margin-left: 5px; margin-right: 2px; margin-top: 5px; margin-bottom: 2px;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" style="width: 301px; font-size: 15px; height: 100%; margin-left: 5px;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="button2" style="width: 18%; height: 100%;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="button1" style="width: 18%; height: 100%;" />
+    </ui:VisualElement>
+</ui:UXML>

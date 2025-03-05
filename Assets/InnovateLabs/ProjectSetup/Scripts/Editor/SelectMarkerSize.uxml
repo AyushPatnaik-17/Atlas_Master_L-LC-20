@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="LengthInputTemplate" src="project://database/Assets/InnovateLabs/ProjectSetup/Scripts/Editor/LengthInputTemplate.uxml?fileID=9197481963319205126&amp;guid=4d0035891229a664d8e4d4323a51374d&amp;type=3#LengthInputTemplate" />
+    <ui:VisualElement name="EditorWindow" style="width: 100%; height: 100%; overflow: hidden; margin-left: 0; margin-right: 0; padding-left: 5px; padding-right: 5px; flex-shrink: 0;">
+        <ui:VisualElement name="Watermark" style="background-image: none; -unity-background-scale-mode: scale-to-fit; height: 150px; max-height: none; min-height: 10%; min-width: auto; transform-origin: top; justify-content: space-around;">
+            <ui:VisualElement name="logo_dx" style="height: 350px; background-image: url(&apos;project://database/Assets/InnovateLabs/ProjectSetup/Data/Icons/DxEditor_Banner_NoMargin2.png?fileID=2800000&amp;guid=b4cd9b13194f98649afb174b8c3fe19a&amp;type=3#DxEditor_Banner_NoMargin2&apos;); -unity-background-scale-mode: scale-to-fit; min-height: 10%; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ProjectSetup_HoloLens" style="flex-wrap: nowrap;">
+            <ui:Label text="Select Marker Size" display-tooltip-when-elided="true" name="SelectMarkerSize" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-style: bold; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-BlackItalic.ttf?fileID=12800000&amp;guid=548d635725994f444b960a5bc4f45ebe&amp;type=3#Roboto-BlackItalic&apos;); margin-bottom: 0; -unity-background-scale-mode: scale-to-fit; white-space: nowrap;" />
+        </ui:VisualElement>
+        <ui:ScrollView name="ProjectSetup_Input" mode="Vertical" style="display: flex; overflow: hidden; flex-grow: 0; flex-wrap: wrap-reverse; flex-shrink: 0;">
+            <ui:Label text="Select Marker Type" display-tooltip-when-elided="true" name="SelectMarkerType" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+            <ui:DropdownField label="Marker Type" index="0" name="MarkerType" choices="Rectangle,Square,Polygon,Circle" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px;" />
+            <ui:VisualElement name="Border" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                <uie:FloatField label="Border Size" value="100" name="BorderWidth" readonly="false" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="RectangleMarker" style="display: flex; overflow: hidden;">
+                <ui:Label text="Rectangle Marker Dimension" display-tooltip-when-elided="true" name="RectangleMarkerDimension" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+                <ui:VisualElement name="Length" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                    <uie:FloatField label="Length" value="2000" name="LengthValue" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                    <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Width" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                    <uie:FloatField label="Width" value="2000" name="WidthValue" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                    <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Instance template="LengthInputTemplate" name="LengthInputTemplate" />
+            <ui:VisualElement name="PolygonMarker" style="display: flex; overflow: hidden;">
+                <ui:Label text="Polygon Marker Dimension" display-tooltip-when-elided="true" name="PolygonMarkerDimension" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Side" value="3" high-value="8" name="PolygonSide" low-value="3" show-input-field="true" style="flex-wrap: wrap; margin-top: 5px; margin-bottom: 5px; font-size: 14px;" />
+                <ui:VisualElement name="PolygonRadius" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                    <uie:FloatField label="Inscribed Radius" value="1000" name="PolygonRadiusValue" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                    <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CircleMarker" style="display: flex; overflow: hidden;">
+                <ui:Label text="Circle Marker Dimension" display-tooltip-when-elided="true" name="CircleMarkerDimension" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+                <ui:VisualElement name="CircleRadius" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                    <uie:FloatField label="Radius" value="1000" name="Radius" style="font-size: 14px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                    <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button text="Save Marker Setup" display-tooltip-when-elided="true" name="SaveMarker" style="margin-top: 15px; margin-bottom: 15px; padding-top: 6px; padding-bottom: 6px; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-Regular.ttf?fileID=12800000&amp;guid=67ea9688cbf23c5489e707514eae07f9&amp;type=3#Roboto-Regular&apos;); -unity-font-style: bold; font-size: 16px; visibility: visible; display: flex;" />
+            <ui:VisualElement name="SavedActions" style="display: none;">
+                <ui:Button text="Edit Marker" display-tooltip-when-elided="true" name="EditMarker" style="margin-top: 5px; margin-bottom: 5px; padding-top: 6px; padding-bottom: 6px; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-Regular.ttf?fileID=12800000&amp;guid=67ea9688cbf23c5489e707514eae07f9&amp;type=3#Roboto-Regular&apos;); -unity-font-style: bold; font-size: 16px; display: flex;" />
+                <ui:Button text="Import Model" display-tooltip-when-elided="true" name="ImportModel" style="margin-top: 5px; margin-bottom: 5px; padding-top: 6px; padding-bottom: 6px; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-Regular.ttf?fileID=12800000&amp;guid=67ea9688cbf23c5489e707514eae07f9&amp;type=3#Roboto-Regular&apos;); -unity-font-style: bold; font-size: 16px;" />
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

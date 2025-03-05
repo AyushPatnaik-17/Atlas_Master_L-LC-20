@@ -1,0 +1,159 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/InnovateLabs/Utilities/Editor/ErgonomicEvaluation_TextInputField.uss?fileID=7433441132597879392&amp;guid=e370a12ecd5afc74ba396c60c3f84983&amp;type=3#ErgonomicEvaluation_TextInputField" />
+    <ui:VisualElement name="EditorWindow" style="width: auto; height: 100%; overflow: visible; margin-left: 0; margin-right: 0; padding-left: 6px; padding-right: 6px; flex-shrink: 0; max-width: initial; justify-content: space-around; align-items: stretch; visibility: visible; flex-grow: 1; max-height: 100%; min-height: 100%;">
+        <ui:VisualElement name="Watermark" style="background-image: none; -unity-background-scale-mode: scale-to-fit; height: 150px; max-height: none; min-height: 10%; min-width: auto; transform-origin: top; justify-content: space-around; flex-shrink: 0; display: flex;">
+            <ui:VisualElement name="logo_dx" style="height: 350px; background-image: url(&apos;project://database/Assets/InnovateLabs/ProjectSetup/Data/Icons/DxEditor_Banner_NoMargin2.png?fileID=2800000&amp;guid=b4cd9b13194f98649afb174b8c3fe19a&amp;type=3#DxEditor_Banner_NoMargin2&apos;); -unity-background-scale-mode: scale-to-fit; min-height: 10%; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-shrink: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ErgonomicEvaluation" style="flex-wrap: nowrap; position: relative; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; justify-content: space-around; -unity-text-align: middle-center; white-space: nowrap; align-items: stretch;">
+            <ui:Label text="Ergonomic Evaluation" display-tooltip-when-elided="true" name="ImportModel" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-style: bold; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-BlackItalic.ttf?fileID=12800000&amp;guid=548d635725994f444b960a5bc4f45ebe&amp;type=3#Roboto-BlackItalic&apos;); margin-bottom: 0; -unity-background-scale-mode: scale-to-fit; white-space: nowrap; justify-content: space-around; flex-wrap: nowrap;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="InteractionHolder" focusable="true" style="-unity-background-scale-mode: scale-to-fit; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); margin-top: 10px; margin-bottom: 10px; flex-shrink: 0; justify-content: space-around; flex-wrap: nowrap; white-space: nowrap; min-width: auto; min-height: 70px; max-height: 250px; height: auto;">
+            <ui:VisualElement name="EditInteractionButton" style="flex-direction: row; justify-content: space-between; flex-basis: auto; flex-grow: 0; align-items: stretch; -unity-background-scale-mode: stretch-to-fill; max-height: 25px; padding-right: 0; padding-top: 0; -unity-slice-top: 0; margin-top: 15px; margin-bottom: 5px; flex-wrap: wrap; flex-shrink: 0; min-height: 25px; margin-left: 5px; margin-right: 15px;">
+                <ui:Button text="Add Selected" display-tooltip-when-elided="true" name="AddSelected" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 8px; padding-right: 8px; padding-top: 2px; padding-bottom: 2px; justify-content: space-between; flex-shrink: 0;" />
+                <ui:Button text="Remove Selected" display-tooltip-when-elided="true" name="RemoveSelected" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 8px; padding-right: 8px; padding-top: 2px; padding-bottom: 2px;" />
+                <ui:Button text="Remove All" display-tooltip-when-elided="true" name="RemoveAll" style="max-width: none; max-height: none; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; padding-left: 8px; padding-right: 8px; padding-top: 2px; padding-bottom: 2px;" />
+            </ui:VisualElement>
+            <ui:ListView focusable="true" show-foldout-header="true" show-add-remove-footer="false" reorderable="true" reorder-mode="Simple" show-border="false" tabindex="0" show-alternating-row-backgrounds="None" virtualization-method="DynamicHeight" horizontal-scrolling="true" selection-type="Multiple" show-bound-collection-size="true" name="InteractiveParts" usage-hints="None" style="flex-direction: column; flex-shrink: 1; justify-content: space-around; flex-wrap: wrap; min-height: 25px; max-height: none; margin-bottom: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="height: 1px; background-color: rgb(255, 255, 255); margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: space-around; top: auto; flex-grow: 0; flex-wrap: nowrap; min-height: 1px; max-height: 1px;" />
+        <ui:VisualElement name="StepHolder" style="flex-direction: row; justify-content: space-around; height: auto; align-items: stretch; margin-top: 5px; -unity-text-align: middle-left; flex-grow: 0; flex-shrink: 1;">
+            <ui:VisualElement name="StepListView" style="width: 40%; align-items: stretch; translate: 0 0; height: auto; justify-content: flex-start;">
+                <ui:VisualElement name="StepLabelHolder" style="flex-direction: row; justify-content: space-between; -unity-text-align: upper-center; align-items: center; max-height: none; min-height: auto; height: auto; max-width: none; flex-wrap: wrap;">
+                    <ui:Label text="Interactive Steps" display-tooltip-when-elided="true" name="StepLabel" style="-unity-text-align: middle-left; font-size: 11.25px; width: auto; height: auto; max-width: none; min-width: auto; white-space: normal; -unity-font-style: bold;" />
+                    <ui:Button text="+" display-tooltip-when-elided="true" name="AddStep" style="max-width: initial; max-height: initial; min-width: auto; min-height: auto; width: auto; height: auto; white-space: nowrap; display: flex;" />
+                </ui:VisualElement>
+                <ui:ListView focusable="true" name="StepList" show-bound-collection-size="false" reorderable="true" horizontal-scrolling="true" virtualization-method="DynamicHeight" style="max-height: none; min-height: auto; justify-content: flex-start; flex-shrink: 1;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Partition" style="width: 1px; -unity-text-outline-width: 65px; height: 98%; background-color: rgb(255, 255, 255); justify-content: space-around; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;" />
+            <ui:VisualElement name="StepDetailHolder" style="width: 70%; justify-content: flex-start; align-items: stretch; flex-grow: 0; height: auto; max-height: 100%; visibility: visible; display: flex;">
+                <ui:VisualElement name="Limit" style="flex-shrink: 0; height: 2.5px;" />
+                <ui:VisualElement name="StepDetails" style="flex-direction: row; justify-content: space-between; height: 25px; min-height: 25px; flex-shrink: 0; font-size: 14px; margin-left: 2.5px; margin-right: 2.5px; margin-top: 2.5px; margin-bottom: 2.5px; max-height: 25px;">
+                    <ui:Label text="Step Details" display-tooltip-when-elided="true" style="font-size: 16px; -unity-font-style: bold;" />
+                    <ui:Button text="Delete" display-tooltip-when-elided="true" name="DeleteStep" style="flex-direction: column; align-items: flex-end; width: 50px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="DescriptionContainer" style="-unity-text-outline-width: 0; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); flex-shrink: 0; height: 90px;">
+                    <ui:Label text="Step Description" display-tooltip-when-elided="true" name="StepDescriptionHeader" style="-unity-font-style: bold; font-size: 12px; background-color: rgb(0, 0, 0);" />
+                    <ui:TextField picking-mode="Ignore" value="filler text" text="Write the detailed description about your step to help user identify interactions" name="StepDescription" multiline="true" binding-path="stepDescription" style="height: 75px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; white-space: normal; -unity-font-style: normal; color: rgb(210, 210, 210); font-size: 12px; -unity-text-align: upper-left;" />
+                </ui:VisualElement>
+                <uie:EnumField label="Interaction Type" type="InnovateLabs.InteractionTypes, Assembly-CSharp" name="InteractionType" binding-path="interactionTypes" style="margin-top: 5px; margin-bottom: 5px; height: 25px;" />
+                <ui:VisualElement name="InteractiveElements" style="flex-grow: 1; flex-shrink: 0; justify-content: flex-start; visibility: visible; opacity: 1; height: auto; max-height: 100%;">
+                    <ui:VisualElement name="Touch" style="display: none; visibility: visible; justify-content: flex-start; flex-wrap: nowrap; flex-grow: 1; height: auto; max-height: 100%;">
+                        <ui:VisualElement name="AddRemoveInteraction" style="flex-direction: row; justify-content: flex-start; min-width: auto; flex-wrap: wrap; flex-shrink: 0; width: auto; flex-grow: 1; height: 25px; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; max-height: 25px; min-height: 25px; visibility: visible; display: flex;">
+                            <ui:Label text="Parts in step" display-tooltip-when-elided="true" name="AddInteractionElements" style="visibility: visible; width: auto; min-width: 10%; max-width: 50%; flex-shrink: 1; flex-grow: 1;" />
+                            <ui:VisualElement name="AddRemoveElements" style="flex-direction: row-reverse; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; min-height: auto; min-width: auto; width: auto; flex-grow: 1;">
+                                <ui:Button text="Remove" display-tooltip-when-elided="true" name="RemoveElement" style="visibility: visible; flex-shrink: 0;" />
+                                <ui:Button text="Add" display-tooltip-when-elided="true" name="AddElement" binding-path="DebugLogger" style="visibility: visible; align-items: flex-start; flex-shrink: 0;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:ListView focusable="true" name="TouchInteractions" show-alternating-row-backgrounds="All" virtualization-method="DynamicHeight" horizontal-scrolling="false" selection-type="Single" binding-path="touchInteractions" show-foldout-header="false" show-border="false" reorderable="true" show-bound-collection-size="false" fixed-item-height="20" style="flex-shrink: 1; justify-content: flex-start; visibility: visible; min-height: auto; flex-grow: 1; flex-wrap: nowrap; position: relative; max-height: 55%;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Translate" style="display: none; justify-content: space-between; visibility: visible;">
+                        <ui:TextField picking-mode="Ignore" label="Movement Part" value="filler text" text="filler text" readonly="true" name="MovementPart" binding-path="movementPart" style="margin-top: 5px;">
+                            <ui:Button text="+" display-tooltip-when-elided="true" name="AddMovementPart" style="flex-shrink: 0;" />
+                            <ui:Button text="-" display-tooltip-when-elided="true" name="RemoveMovementPart" style="flex-shrink: 0;" />
+                        </ui:TextField>
+                        <ui:TextField picking-mode="Ignore" label="Pivot" value="0" readonly="true" name="PivotHolder" binding-path="movementPivot" style="margin-top: 5px;">
+                            <ui:Button text="+" display-tooltip-when-elided="true" name="AddTranslatePivot" style="flex-shrink: 0;" />
+                            <ui:Button text="-" display-tooltip-when-elided="true" name="RemoveTranslatePivot" style="flex-shrink: 0;" />
+                        </ui:TextField>
+                        <uie:EnumField label="Movment Direction" value="XAxis" type="Microsoft.MixedReality.Toolkit.AxisFlags, Microsoft.MixedReality.Toolkit.Core" name="MovementConstraint" binding-path="movementDirection" style="margin-top: 5px; margin-bottom: 5px;" />
+                        <ui:VisualElement name="MovementDistanceInputHolder" style="flex-grow: 1; flex-shrink: 0; height: auto;">
+                            <ui:VisualElement name="MovementDistanceInput" style="display: flex; overflow: hidden;">
+                                <ui:Label text="Square Marker Dimension" display-tooltip-when-elided="true" name="InputHeader" binding-path="distance" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px; visibility: hidden; display: none;" />
+                                <ui:VisualElement name="SideLength" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; flex-shrink: 1; white-space: normal; -unity-text-align: middle-left; -unity-background-scale-mode: scale-to-fit; flex-grow: 1;">
+                                    <uie:FloatField label="Distance" value="10" name="LengthInput" binding-path="distance" style="font-size: 12px; -unity-text-align: middle-left; flex-wrap: wrap; justify-content: space-between; width: 78%; -unity-background-scale-mode: scale-to-fit; white-space: normal;" />
+                                    <ui:DropdownField index="0" name="DimensionUnit" choices="mm, cm, m" focusable="false" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; justify-content: space-around; flex-wrap: wrap; flex-shrink: 1; flex-grow: 1; -unity-text-align: middle-center;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="AssociatedPartHolder" style="flex-shrink: 0; flex-grow: 1; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px;">
+                            <ui:VisualElement name="AssociatedPart" style="flex-direction: row; flex-wrap: wrap; min-width: auto; min-height: auto; flex-shrink: 0; flex-grow: 1; display: none;">
+                                <ui:Label text="Associated Parts" display-tooltip-when-elided="true" name="AssociatedPartLabel" style="height: auto; max-height: none; min-height: auto; width: auto; flex-shrink: 1; flex-grow: 1; min-width: 10%; max-width: 50%;" />
+                                <ui:VisualElement name="AssociatedPartButtons" style="flex-direction: row; justify-content: space-between; flex-shrink: 1; flex-grow: 1; max-width: none; min-width: auto;">
+                                    <ui:Button text="Add" display-tooltip-when-elided="true" name="AddParts" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                    <ui:Button text="Clear" display-tooltip-when-elided="true" name="ClearParts" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="FeedbackPointerHolder" style="flex-shrink: 0; flex-grow: 1; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px;">
+                            <ui:VisualElement name="FeedbackPointer" style="flex-direction: row; flex-wrap: wrap; min-width: auto; min-height: auto; flex-shrink: 0; flex-grow: 1;">
+                                <ui:Label text="Feedback Pointer" display-tooltip-when-elided="true" name="FeedbackLabel" style="height: auto; max-height: none; min-height: auto; width: auto; flex-shrink: 1; flex-grow: 1; min-width: 10%; max-width: 50%;" />
+                                <ui:VisualElement name="FeedbackManipulation" style="flex-direction: row; justify-content: space-between; flex-shrink: 1; flex-grow: 1; max-width: none; min-width: auto;">
+                                    <ui:Button text="Select" display-tooltip-when-elided="true" name="Select" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                    <ui:Button text="Move" display-tooltip-when-elided="true" name="Move" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Rotate" style="display: flex; justify-content: flex-start; visibility: visible; align-items: stretch;">
+                        <ui:TextField picking-mode="Ignore" label="Rotation Part" readonly="true" name="RotationParts" binding-path="rotationPart" style="margin-top: 5px; display: none;">
+                            <ui:Button text="+" display-tooltip-when-elided="true" name="AddRotationPart" style="flex-shrink: 0;" />
+                            <ui:Button text="-" display-tooltip-when-elided="true" name="RemoveRotationPart" style="flex-shrink: 0;" />
+                        </ui:TextField>
+                        <ui:VisualElement name="PartListHolderRotation" style="flex-direction: row; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; height: 25px; max-height: 25px; min-height: 25px; flex-grow: 1;">
+                            <ui:Label text="Parts" display-tooltip-when-elided="true" name="RotationParts" style="width: 50%;" />
+                            <ui:VisualElement style="flex-direction: row-reverse; width: 50%; opacity: 1;">
+                                <ui:Button text="Remove" display-tooltip-when-elided="true" name="RemRotPart" />
+                                <ui:Button text="Add" display-tooltip-when-elided="true" name="AddRotPart" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:ListView focusable="true" name="PartsRotation" reorderable="false" show-add-remove-footer="false" show-foldout-header="false" show-bound-collection-size="false" style="max-height: 120px; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; display: flex; min-height: 30px;" />
+                        <ui:VisualElement style="flex-direction: row-reverse;">
+                            <ui:Toggle name="KeepActivatedToggle" style="right: 1px; top: 1.5px; left: 0; flex-direction: row; justify-content: flex-start; align-items: stretch; -unity-text-align: middle-left; white-space: normal;" />
+                            <ui:Label text="Keep Activated" display-tooltip-when-elided="true" name="KeepActivatedLabel" style="right: 0; top: -1.2px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GrabPartHolder" style="flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: flex-start; height: 70px; flex-shrink: 0;">
+                            <ui:VisualElement style="align-items: flex-start; width: 100%; height: 100%; justify-content: space-between;">
+                                <ui:VisualElement style="white-space: normal; flex-direction: row; flex-grow: 0; width: 100%; justify-content: space-between; align-items: stretch; height: 20px;">
+                                    <ui:Label text="Grab Part" display-tooltip-when-elided="true" style="height: 100%; width: 70%;" />
+                                    <ui:Button text="+" display-tooltip-when-elided="true" name="AddGrabPart" style="flex-shrink: 0; right: 35px; bottom: 0; width: 26px; height: 100%; top: 6%; left: auto; max-height: initial; min-height: auto; position: absolute;" />
+                                    <ui:Button text="-" display-tooltip-when-elided="true" name="RemoveGrabPart" style="width: 26px; height: 100%; top: 6%; left: auto; max-height: none; min-height: initial; position: absolute; right: 0;" />
+                                </ui:VisualElement>
+                                <ui:ListView focusable="true" name="GrabPartsList" show-bound-collection-size="false" style="width: 100%; height: 45px; flex-grow: 1; flex-basis: auto; overflow: hidden; max-height: none; min-height: auto; flex-direction: column; flex-shrink: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="FeedbackPointerHolder" style="flex-shrink: 0; flex-grow: 1; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px;">
+                            <ui:VisualElement name="FeedbackPointer" style="flex-direction: row; flex-wrap: wrap; min-width: auto; min-height: auto; flex-shrink: 0; flex-grow: 1;">
+                                <ui:Label text="Feedback Pointer" display-tooltip-when-elided="true" name="FeedbackLabel" style="height: auto; max-height: none; min-height: auto; width: auto; flex-shrink: 1; flex-grow: 1; min-width: 10%; max-width: 50%; padding-left: 0;" />
+                                <ui:VisualElement name="FeedbackManipulation" style="flex-direction: row; justify-content: space-between; flex-shrink: 1; flex-grow: 1; max-width: none; min-width: auto;">
+                                    <ui:Button text="Select" display-tooltip-when-elided="true" name="Select" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                    <ui:Button text="Move" display-tooltip-when-elided="true" name="Move" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="PartCollision" style="display: none; justify-content: space-between; visibility: visible;">
+                        <ui:VisualElement name="PartListHolder" style="flex-direction: row; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px; height: 25px; max-height: 25px; min-height: 25px; flex-grow: 1;">
+                            <ui:Label text="Parts" display-tooltip-when-elided="true" name="CollidingParts" style="width: 50%;" />
+                            <ui:VisualElement style="flex-direction: row-reverse; width: 50%;">
+                                <ui:Button text="Remove" display-tooltip-when-elided="true" name="RemoveCollisionPart" />
+                                <ui:Button text="Add" display-tooltip-when-elided="true" name="AddCollisionPart" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:ListView focusable="true" name="Parts" style="max-height: none; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;" />
+                        <ui:VisualElement name="SnapPositionHolder" style="flex-direction: row; height: 25px; max-height: 25px; min-height: 25px; flex-grow: 1; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;">
+                            <ui:Label text="Snap Position" display-tooltip-when-elided="true" name="SnapPositionLabel" style="width: 50%;" />
+                            <ui:VisualElement style="width: 50%; flex-grow: 1;">
+                                <ui:Button text="Adjust" display-tooltip-when-elided="true" name="AdjustSnapPosition" style="flex-shrink: 1; flex-grow: 1;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="SnapVolumeHolder" style="flex-direction: row; height: 25px; max-height: 25px; min-height: 25px; flex-grow: 1; margin-left: 4px; margin-right: 4px; margin-top: 4px; margin-bottom: 4px;">
+                            <ui:Label text="Snap Volume" display-tooltip-when-elided="true" name="SnapVolumeLabel" style="width: 30%;" />
+                            <ui:DropdownField index="-1" choices="Cube, Cylinder, Sphere" name="SnapVolumeType" style="width: 45%;" />
+                            <ui:Button text="Fit" display-tooltip-when-elided="true" name="FitSnapVolume" style="flex-shrink: 1; flex-grow: 1; width: 25%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="FeedbackPointerHolder" style="flex-shrink: 0; flex-grow: 1; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; flex-direction: row;">
+                            <ui:Label text="Feedback Pointer" display-tooltip-when-elided="true" name="FeedbackLabel" style="height: auto; max-height: none; min-height: auto; width: auto; flex-shrink: 1; flex-grow: 1; min-width: 10%; max-width: 50%;" />
+                            <ui:VisualElement name="FeedbackPointer" style="flex-direction: row; flex-wrap: wrap; min-width: auto; min-height: auto; flex-shrink: 0; flex-grow: 1;">
+                                <ui:VisualElement name="FeedbackManipulation" style="flex-direction: row; justify-content: none; flex-shrink: 1; flex-grow: 1; max-width: none; min-width: auto;">
+                                    <ui:Button text="Select" display-tooltip-when-elided="true" name="Select" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                    <ui:Button text="Move" display-tooltip-when-elided="true" name="Move" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="TouchPartElements" style="flex-wrap: nowrap; justify-content: space-between; flex-shrink: 1; flex-grow: 0; visibility: visible; width: auto; max-width: none;">
+        <ui:TextField picking-mode="Ignore" label="Touch Part" value="filler text" readonly="true" name="TouchPart" focusable="false" style="flex-shrink: 1; width: auto; flex-wrap: wrap; justify-content: space-around;" />
+        <ui:VisualElement name="FeedbackPointerHolder" style="flex-shrink: 0; flex-grow: 0; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px; flex-wrap: wrap; flex-direction: row; justify-content: space-around;">
+            <ui:Label text="Feedback Pointer" display-tooltip-when-elided="true" name="FeedbackLabel" style="height: auto; max-height: none; min-height: auto; width: auto; flex-shrink: 0; flex-grow: 1; min-width: 10%; max-width: 50%;" />
+            <ui:VisualElement name="FeedbackManipulation" style="flex-direction: row; justify-content: space-between; flex-shrink: 0; flex-grow: 1; max-width: none; min-width: auto; flex-wrap: nowrap;">
+                <ui:Button text="Select" display-tooltip-when-elided="true" name="Select" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                <ui:Button text="Move" display-tooltip-when-elided="true" name="Move" style="width: 50%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <uie:ObjectField label="Touch Part" name="TouchPart" type="UnityEngine.GameObject, UnityEngine.CoreModule" style="margin-top: 5px; flex-grow: 0; display: none; visibility: hidden;" />
+    </ui:VisualElement>
+</ui:UXML>

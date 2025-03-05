@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="EditorWindow" style="width: 100%; height: 100%; overflow: hidden; margin-left: 0; margin-right: 0; padding-left: 5px; padding-right: 5px; flex-shrink: 0;">
+        <ui:VisualElement name="Watermark" style="background-image: none; -unity-background-scale-mode: scale-to-fit; height: 150px; max-height: none; min-height: 10%; min-width: auto; transform-origin: top; justify-content: space-around;">
+            <ui:VisualElement name="logo_dx" style="height: 350px; background-image: url(&apos;project://database/Assets/InnovateLabs/ProjectSetup/Data/Icons/DxEditor_Banner_NoMargin2.png?fileID=2800000&amp;guid=b4cd9b13194f98649afb174b8c3fe19a&amp;type=3#DxEditor_Banner_NoMargin2&apos;); -unity-background-scale-mode: scale-to-fit; min-height: 10%; justify-content: space-around; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Import3DHeader" style="flex-wrap: nowrap; display: flex;">
+            <ui:Label text="Import 3D Model" display-tooltip-when-elided="true" name="Import3DText" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-style: bold; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-BlackItalic.ttf?fileID=12800000&amp;guid=548d635725994f444b960a5bc4f45ebe&amp;type=3#Roboto-BlackItalic&apos;); margin-bottom: 0; -unity-background-scale-mode: scale-to-fit; white-space: nowrap;" />
+        </ui:VisualElement>
+        <ui:ScrollView name="ImportModel_Input" mode="Vertical" style="display: flex; overflow: hidden; flex-grow: 0; flex-wrap: wrap-reverse; flex-shrink: 0;">
+            <ui:Label text="Select 3D Model Format" display-tooltip-when-elided="true" name="SelectModelFormat" style="-unity-font-style: bold; margin-top: 5px; margin-bottom: 5px;" />
+            <ui:DropdownField label="Model Format" index="0" name="ModelFormat" choices=".fbx,.obj,.blend,.pixyz" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; -unity-text-align: middle-left;" />
+            <ui:VisualElement name="ModelPathField" style="-unity-text-align: middle-left; flex-direction: row; flex-wrap: wrap-reverse; flex-grow: 1;">
+                <ui:TextField picking-mode="Ignore" label="3D Model Path" name="ModelPath" style="font-size: 14px; flex-shrink: 1; flex-grow: 1;" />
+                <ui:Button text="Browse" display-tooltip-when-elided="true" name="BrowsePath" />
+            </ui:VisualElement>
+            <ui:DropdownField label="Working Unit" index="0" name="WorkingUnit" choices="mm, cm, m" style="margin-top: 5px; margin-bottom: 5px; font-size: 14px; -unity-text-align: middle-left;" />
+            <ui:Button text="Import Model" display-tooltip-when-elided="true" name="ImportModel" focusable="true" style="margin-top: 15px; margin-bottom: 15px; padding-top: 6px; padding-bottom: 6px; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-Regular.ttf?fileID=12800000&amp;guid=67ea9688cbf23c5489e707514eae07f9&amp;type=3#Roboto-Regular&apos;); -unity-font-style: bold; font-size: 16px; visibility: visible; display: flex;" />
+            <ui:VisualElement name="PixyzPrefabImport" style="display: none; flex-wrap: wrap;">
+                <ui:VisualElement name="PixyzPrefabPath" style="-unity-text-align: middle-left; flex-direction: row; flex-wrap: wrap-reverse; flex-grow: 0;">
+                    <ui:TextField picking-mode="Ignore" label="Folder Path" name="ModelPath" style="font-size: 14px; flex-shrink: 1; flex-grow: 1;" />
+                    <ui:Button text="Browse" display-tooltip-when-elided="true" name="BrowsePath" />
+                </ui:VisualElement>
+                <ui:ListView focusable="true" name="PixyzPrefabList" style="flex-grow: 1; max-height: 250px; min-height: 25px;" />
+            </ui:VisualElement>
+            <ui:ListView focusable="true" name="ModelList" style="max-height: 250px; min-height: 25px; flex-direction: row; flex-wrap: wrap;" />
+            <ui:Button text="Ergonomic Evaluation" display-tooltip-when-elided="true" name="ErgonomicEvaluation" style="margin-top: 5px; margin-bottom: 5px; padding-top: 6px; padding-bottom: 6px; -unity-font: url(&apos;project://database/Assets/InnovateLabs/Fonts/Roboto/Roboto-Regular.ttf?fileID=12800000&amp;guid=67ea9688cbf23c5489e707514eae07f9&amp;type=3#Roboto-Regular&apos;); -unity-font-style: bold; font-size: 16px;" />
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>
